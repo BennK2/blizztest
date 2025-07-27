@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rusty Space Arms Bazaar</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="nav-panel">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#deals">Deals</a>
+      <a href="#categories">Categories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero-panel">
+    <h1 id="hero-text"></h1>
+    <p>Top‑secret armaments for discerning operatives</p>
+    <button id="view-deals">View Deals</button>
+  </section>
+
+  <!-- DEALS GRID & FILTER -->
+  <section id="deals" class="deals-panel">
+    <h2>Weapon Deals</h2>
+    <div class="filter-bar">
+      <label>
+        Category:
+        <select id="category-filter">
+          <option value="all">All</option>
+          <option value="firearms">Firearms</option>
+          <option value="blades">Blades</option>
+          <option value="explosives">Explosives</option>
+        </select>
+      </label>
+      <label>
+        Price:
+        <select id="price-filter">
+          <option value="all">All</option>
+          <option value="low">Under 5k Cr</option>
+          <option value="mid">5k–20k Cr</option>
+          <option value="high">20k+ Cr</option>
+        </select>
+      </label>
+    </div>
+    <div class="grid" id="weapon-grid">
+      <!-- Weapon cards inserted by JS -->
+    </div>
+  </section>
+
+  <!-- CATEGORIES INFO -->
+  <section id="categories" class="info-panel">
+    <h2>Deal Categories</h2>
+    <div class="categories-grid">
+      <div class="cat-card">
+        <h3>Firearms</h3>
+        <p>Handguns, rifles, and energy weapons.</p>
+      </div>
+      <div class="cat-card">
+        <h3>Blades</h3>
+        <p>Daggers, swords, and vibro‑knives.</p>
+      </div>
+      <div class="cat-card">
+        <h3>Explosives</h3>
+        <p>Grenades, mines, and plasma charges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DETAIL -->
+  <div id="detail-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <p><strong>Price:</strong> <span id="modal-price"></span></p>
+      <button id="modal-purchase">Purchase</button>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="contact-panel">
+    <h2>Contact Shadow Bazaar</h2>
+    <form>
+      <input type="email" placeholder="Your Secure Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>&copy; 2025 Rusty Space Arms Bazaar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

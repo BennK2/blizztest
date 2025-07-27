@@ -1,0 +1,13 @@
+.env
+.htaccess
+*.log
+*.pyc
+__pycache__/
+*.egg-info/
+node_modules/
+.venv/
+env/
+dist/
+build/
+.vscode/
+.idea/
